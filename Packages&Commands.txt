@@ -1,0 +1,16 @@
+
+List of all used packages:
+
+ - System.IdentityModel.Tokens.Jwt - Microsoft (Lesson 44)
+ - Microsoft.AspNetCore.Authentication.JwtBearer - Microsoft (Lesson 46)
+
+    - **Command: ng g -h (Lesson 50)
+        ng generate command. Get help.
+
+    - **Command: ng g c nav --skip-tests (Lesson 50)
+        reads: ng generate(g) component(c) named nav, skip testing files.
+
+    - **Command: ng g s account --skip-tests (Lesson 52)
+        reads: ng generate(g) service(s) named account, skip testing files.
+
+

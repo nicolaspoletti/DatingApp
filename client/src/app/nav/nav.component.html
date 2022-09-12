@@ -1,0 +1,57 @@
+<p>nav works!</p>
+
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">Datting App</a>
+          <ul class="navbar-nav me-auto mb-2 mb-md-0" *ngIf="accountService.currentUser$ | async">
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+              </svg> Matches
+            </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                    </svg>
+                    Lists
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+                    </svg>    
+                 Messages
+                </a>
+            </li>
+          </ul>
+
+          <div class="dropdown" *ngIf="accountService.currentUser$ | async" dropdown>
+            <a class="dropdown-toggle text-light" dropdownToggle>Welcome user</a>
+            <div class="dropdown-menu mt-3" *dropdownMenu>
+              <a class="dropdown-item">Edit profile</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" (click)="logout()">Logout</a>
+            </div>
+          </div>
+
+          <form *ngIf="(accountService.currentUser$ | async) === null" #loginForm="ngForm" class="d-flex" role="search" (ngSubmit)="login()" autocomplete="off">
+            <input
+                name="username" 
+                [(ngModel)]="model.username"
+                class="form-control me-2" 
+                type="search"
+                placeholder="Username">
+            <input 
+                name = "password"
+                [(ngModel)]="model.password"
+                class="form-control me-2" 
+                type="password" 
+                placeholder="Password">
+            <button class="btn btn-outline-success" type="submit">Login</button>
+          </form>
+    </div>
+</nav>
