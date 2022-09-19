@@ -24,4 +24,11 @@ List of all used packages & commands:
      - **Command: ng g m shared --flat
     reads: ng generate(g) module(m) named shared, make it flat(no folder, just file).
 
-    
+    - **Command: ng g c test-errors --skip-tests
+
+    - **Command: ng g interceptor --skip-tests (Lesson 80)
+    creates an angular interceptor
+
+    - **Command: ng g c not-found --skip-tests (Lesson 82)
+
+    - **Command: ng g c server-error --skip-tests (Lesson 83)
