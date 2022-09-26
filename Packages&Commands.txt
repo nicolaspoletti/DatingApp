@@ -32,3 +32,6 @@ List of all used packages & commands:
     - **Command: ng g c not-found --skip-tests (Lesson 82)
 
     - **Command: ng g c server-error --skip-tests (Lesson 83)
+
+
+ - PACKAGE: AutoMapper.Extensions.Microsoft.DependencyInjection (Lesson 96)
