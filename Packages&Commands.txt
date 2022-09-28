@@ -35,3 +35,13 @@ List of all used packages & commands:
 
 
  - PACKAGE: AutoMapper.Extensions.Microsoft.DependencyInjection (Lesson 96)
+
+    **Command: ng g s members --skip-tests (Lesson 104)
+    creates the members service
+
+    **Command: ng g c member-card --skip-tests (Lesson 106)
+
+    **Command: ng g interceptor jwt --skip-tests (Lesson 109)
+
+- PACKAGE: NgxGallery - @kolkov/ngx-gallery (Lesson 113)
+    **Command: npm install @kolkov/ngx-gallery 
